@@ -1,0 +1,88 @@
+html {
+    font-size: 14px;
+}
+
+.stopwatch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+}
+
+.stopwatch__value {
+    padding: 5px 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0,0,0,0);
+    user-select: none;
+    cursor: pointer;
+    transition: border 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.stopwatch_theme_light {
+    background-color: #fff;
+}
+
+.stopwatch_theme_light .stopwatch__value {
+    color: #222;
+}
+
+.stopwatch__theme-button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    text-indent: -999px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../icons/sun.svg);
+    background-position: center;
+    background-size: cover;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.stopwatch_theme_light .stopwatch__theme-button {
+    background-image: url(../icons/moon.svg);
+}
+
+@media screen and (max-width: 991px) {
+
+    .stopwatch__value {
+        font-size: 8rem;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+
+    .stopwatch__value {
+        font-size: 6rem;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .stopwatch__value {
+        font-size: 5rem;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+
+    .stopwatch__value {
+        font-size: 4rem;
+    }
+    
+}
