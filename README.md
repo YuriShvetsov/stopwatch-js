@@ -1,5 +1,5 @@
-## Calculator
-Stopwatch on JavaScript
+## Stopwatch
+Simple stopwatch on JavaScript
 
 Author: Yuri Shvetsov
 
