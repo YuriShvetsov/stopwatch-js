@@ -138,7 +138,7 @@ const app = {
             if (!action) return;
             if (!this.clickActions[action]) throw new Error(`Action ${action} is not defined!`);
 
-            this.clickActions[action].call(this);
+            this.clickActions[action].call(this, event.target);
         },
         keydownHandler: function(event) {
             if (event.code == 'Enter') this.toggleStatus();
@@ -199,11 +199,13 @@ const app = {
         },
 
         clickActions: {
-            toggleTheme: function() {
+            toggleTheme: function(target) {
                 this.model.toggleTheme();
                 this.setCurrentTheme();
+
+                target.blur();
             },
-            toggleStopwatch: function() {
+            toggleStopwatch: function(target) {
                 this.toggleStatus();
             }
         }
