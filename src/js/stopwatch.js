@@ -1,4 +1,4 @@
-// Stopwatch by Yuri Shvetsov (updated 26.12.20)
+// Stopwatch by Yuri Shvetsov (updated 01.04.21)
 
 const app = {
 
@@ -194,7 +194,7 @@ const app = {
             this.model = model;
             this.view = view;
 
-            this.setCurrentTheme();
+            // this.setCurrentTheme();
             this.initHandlers();
         },
 
